@@ -1,0 +1,211 @@
+.my-profile {
+    flex: 1;
+    height: 100dvh;
+    background-color: var(--color-background-general);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.my-profile-header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 0.1rem 0.25rem var(--color-shadow);
+    background-color: var(--color-background-general);
+}
+.my-profile-header h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ICON BUTTON */
+
+.profile-icon-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+.profile-icon-btn:hover {
+    background-color: var(--color-background-hover-seconday);
+}
+.profile-icon-btn svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.my-profile-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.5rem, 5vw, 2.5rem) 1.25rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.my-profile-image {
+    margin-top: 2rem;
+    width: clamp(8rem, 20vw, 12rem);
+    height: clamp(8rem, 20vw, 12rem);
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-profile-green);
+    animation: profileRotate 0.6s ease;
+}
+.my-profile-details {
+    width: 100%;
+    max-width: 24rem;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+    background-color: var(--color-white);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.1rem 0.25rem var(--color-shadow);
+    box-sizing: border-box;
+}
+.my-profile-details h2 {
+    margin: 0 0 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+.my-profile-details p {
+    margin: 0.35rem 0;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+}
+
+.my-profile-options {
+    width: 100%;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-option {
+    width: 100%;
+    height: 3.25rem;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 0.9rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: left;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+}
+
+.profile-option:hover {
+    background-color: var(--color-background-selected);
+}
+
+.my-profile-details input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.8rem;
+    margin-bottom: 0.9rem;
+    padding: 0 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    background-color: var(--color-background-general);
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.my-profile-details input:focus {
+    outline: none;
+    border-color: var(--color-shadow);
+}
+.save-changes-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-width: 8rem;
+    height: 2.8rem;
+    margin-top: 0.75rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: var(--color-profile-green);
+    color: var(--color-white);
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.save-changes-btn:hover {
+    background-color: var(--color-accent-green);
+}
+/*por las dudas pero ya lo tomaba del otro css, pero repito por las dudas*/
+.edit-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+}
+
+.edit-buttons .save-changes-btn {
+    margin-top: 0;
+}
+
+.cancel-profile-btn {
+    flex-shrink: 0;
+}
+.profile-icon-btn.active {
+    color: var(--color-profile-green);
+    background-color: var(--color-background-selected);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    .my-profile {
+        width: 100vw;
+        height: 100dvh;
+        box-sizing: border-box;
+    }
+    .my-profile-header {
+        padding: 0 0.75rem;
+    }
+
+    .my-profile-content {
+        padding: 1rem;
+    }
+
+    .my-profile-image {
+        margin-top: 1rem;
+    }
+
+    .my-profile-details,
+    .my-profile-options {
+        width: 100%;
+    }
+
+}
+
+@keyframes profileRotate {
+    from {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,70 @@
+.chat-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    margin: 0.6rem 0 0.3rem;
+    border-radius: 0.6rem;
+    background-color: var(--color-background-general);
+    animation: chatItemAppear 1s ease forwards;
+    opacity: 0;
+}
+.chat-item:hover {
+    background-color: var(--color-background-selected);
+}
+.chat-info {
+    flex: 1;
+    min-width: 0; /*asi el contenido se peude achicar*/
+}
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+}
+.chat-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.chat-header span {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    flex-shrink: 0; /* evita que la hora desaparezca */
+}
+.chat-info p {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis; /* para los ...*/
+    white-space: nowrap;
+}
+.chat-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.75rem;
+}
+
+@keyframes chatItemAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,74 @@
+.sidebar-header {
+    height: 100dvh;
+    width: 64px;
+    box-sizing: border-box; /* para incluir el padding */
+    background-color: var(--color-background-general);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 12px;
+}
+.sidebar-header-top,
+.sidebar-header-bottom {
+    display: flex;
+    flex-direction: column;
+}
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+.icon-btn:hover {
+    background-color: var(--color-background-selected);
+}
+.icon-btn:hover img {
+    filter: contrast(500%);
+}
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.profile-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid var(--color-accent-green);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-btn:hover img {
+    background-color: transparent;
+    filter: none;
+     transform: scale(1.15);
+}
+
+/*Tablet + mobile */
+@media (max-width: 768px) {
+    .sidebar-header {
+        width: calc(100% - 1.5rem);
+        height: 64px;
+        flex-direction: row;
+        padding: 10px 12px;
+        position: fixed;
+        bottom: 0.75rem;
+        left: 0.75rem;
+        border-radius: 1rem;
+        background-color: rgba(247, 245, 243, 0.85);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+    }
+
+    .sidebar-header-top,
+    .sidebar-header-bottom {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/*NOTAS PROFE: 
+elegi mover el sidebar en tablet para que en puntos de 600px , aunque nadie use esa medida, se reducía demasiado el espacio disponible para la conversación*/

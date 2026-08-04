@@ -1,0 +1,30 @@
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+}
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-btn:hover {
+    background-color: var(--color-background-hover-seconday);
+}

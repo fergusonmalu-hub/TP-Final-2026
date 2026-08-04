@@ -1,0 +1,135 @@
+.mobile-back-btn {
+    display: none;
+    color: var(--color-text-primary);
+}
+.mobile-back-btn svg {
+    stroke: currentColor;
+}
+.chat-navbar {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.1rem 0.25rem var(--color-background-general);
+    position: relative;
+    z-index: 1;
+}
+.chat-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+.chat-contact-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--color-white);
+}
+.chat-contact-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+.chat-navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-text-primary);
+}
+.chat-navbar-actions svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    stroke: currentColor;
+}
+
+.chat-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.chat-search input {
+    width: 100%;
+    max-width: 20rem;
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background-general);
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.chat-search input:focus {
+    outline: none;
+    border-color: var(--color-border);
+}
+
+.chat-search .icon-btn {
+    flex-shrink: 0;
+}
+@media (max-width:480px) {
+
+    .mobile-back-btn {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border:none;
+        background:transparent;
+        padding:0;
+        margin-right:0.5rem;
+        color:var(--color-text-primary);
+    }
+
+    .mobile-back-btn svg {
+        width:1.5rem;
+        height:1.5rem;
+    }
+
+    .chat-navbar {
+        padding:0 0.75rem;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .chat-contact {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .chat-navbar-actions {
+        margin-left: auto;
+    }
+
+    /* BUSCADOR mobile */
+
+    .chat-search {
+        position: absolute;
+        left: 3.5rem;
+        right: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--color-white);
+        z-index: 2;
+    }
+
+    .chat-search input {
+        flex: 1;
+        width: auto;
+        height: 2.5rem;
+    }
+
+    .chat-search .icon-btn {
+        flex-shrink: 0;
+    }
+
+}

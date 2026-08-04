@@ -1,0 +1,25 @@
+.chat {
+    position: relative;
+    flex: 1; /* ocupa el espacio restante del layout */
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background-general);
+    overflow: hidden; /* evita que el SVG salga del área del chat */
+    min-width: 0; /* permite que el chat se reduzca de tamaño en pantallas pequeñas */
+    box-sizing: border-box;
+    
+}
+.chat::before {
+    content: ""; /* crea la capa del fondo */
+    position: absolute;
+    inset: 0;
+    background-image: url("../../assets/images/pic-background-chats.svg");
+    background-repeat: repeat;
+    background-size: 25rem;
+    opacity: 0.1;
+    z-index: 0; /* coloca la capa del fondo detrás del contenido del chat */
+}
+
+
+/* No necesita responsive: el layout se adapta mediante los componentes internos */
